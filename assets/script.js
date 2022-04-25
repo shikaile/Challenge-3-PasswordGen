@@ -56,7 +56,11 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
+// let noPassword = empty;
+// (upperCase.checked) ? initialPassword += upCase : "";
+// (lowerCase.checked) ? initialPassword += loCase : "";
+// (numericCharacters.checked) ? initialPassword += number : "";
+// (specialCharacters.checked) ? initialPassword += special : "";
 
 // function generatePassword(l, noPassword) {
 //   let pass ='';
