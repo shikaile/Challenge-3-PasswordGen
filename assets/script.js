@@ -34,7 +34,19 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
+  let noPassword = empty;
+(upperCase.checked) ? initialPassword += upCase : "";
+(lowerCase.checked) ? initialPassword += loCase : "";
+(numericCharacters.checked) ? initialPassword += number : "";
+(specialCharacters.checked) ? initialPassword += special : "";
+
+  var password = generatePassword(l, noPassword) {
+      let pass ='';
+      for (let i= 0; i<l; i++){
+        pass += noPassword.charAt(Math.floor(Math.random() * initialPassword.length));
+      }
+      return pass;
+    };
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
@@ -44,11 +56,7 @@ function writePassword() {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-// let noPassword = empty;
-// (upperCase.checked) ? initialPassword += upCase : "";
-// (lowerCase.checked) ? initialPassword += loCase : "";
-// (numericCharacters.checked) ? initialPassword += number : "";
-// (specialCharacters.checked) ? initialPassword += special : "";
+
 
 // function generatePassword(l, noPassword) {
 //   let pass ='';
