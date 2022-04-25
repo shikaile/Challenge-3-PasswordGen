@@ -15,17 +15,17 @@
 // THEN the password is either displayed in an alert or written to the page
 
 // Assignment code here
-const empty = "";
-const upCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-const loCase = "abcdefghijklmnopqrstuvwxyz";
-const number = "0123456789";
-const special = "!@#$%^&*=-";
+var empty = "";
+var upCase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var loCase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+var numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+var special = ["!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "/", "\:", "\;", " < ", "=", " > ", " ? ", "@", "[", "\\", "]", " ^ ", "_", "`", "{", "|", "}", "~"];
 
-const passwordLength = document.getElementById(password-length);
-const lowerCase = document.getElementById(lowercase-characters);
-const upperCase = document.getElementById(uppercase-characters);
-const numericCharacters = document.getElementById(numeric-characters);
-const specialCharacters = document.getElementById(special-characters);
+var passwordLength = document.getElementById ("#password-length");
+var lowerCase = document.getElementById ( "#lowercase-characters");
+var upperCase = document.getElementById("#uppercase-characters");
+var numericCharacters = document.getElementById("#numeric-characters");
+var specialCharacters = document.getElementById("#special-characters");
 
 
 
@@ -34,19 +34,7 @@ var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  let noPassword = empty;
-(upperCase.checked) ? initialPassword += upCase : "";
-(lowerCase.checked) ? initialPassword += loCase : "";
-(numericCharacters.checked) ? initialPassword += number : "";
-(specialCharacters.checked) ? initialPassword += special : "";
-
-  var password = generatePassword(l, noPassword) {
-      let pass ='';
-      for (let i= 0; i<l; i++){
-        pass += noPassword.charAt(Math.floor(Math.random() * initialPassword.length));
-      }
-      return pass;
-    };
+  var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
